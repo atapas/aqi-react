@@ -64,14 +64,31 @@ li {
   border-color: #480D27;
 }
 
-.unknown {
+.cityInfo.unknown {
   background-color: #ebebeb;
   color: #000000;
   border-color: #ebebeb;
 }
 
+.cityInfo .details {
+  background-color: #ebebeb;
+  color: #000000;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 input[type=text] {
-  width: 130px;
+  width: 60%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
