@@ -26,7 +26,7 @@ const SearchCities = () => {
             { error }
             <form onSubmit={ e => searchCityName(e)}>
                 <label>
-                City:
+                
                 <input 
                     type="text" 
                     value={ searchText } 
