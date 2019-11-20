@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
 
 .App-header {
   background-color: #282c34;
@@ -19,4 +16,14 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+li {
+  list-style: none;
+}
+
+.cityInfo {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #000;
 }
