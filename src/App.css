@@ -27,3 +27,45 @@ li {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.cityInfo.good {
+  background-color: #52B947;
+  color: #000000;
+  border-color: #52B947;
+}
+
+.cityInfo.moderate {
+  background-color: #F3EC19;
+  color: #000000;
+  border-color: #F3EC19;
+}
+
+.cityInfo.unhealthy-sentitive {
+  background-color: #F57E20;
+  color: #FFFFFF;
+  border-color: #F57E20;
+}
+
+.cityInfo.unhealthy {
+  background-color: #ED1D24;
+  color: #FFFFFF;
+  border-color: #ED1D24;
+}
+
+.cityInfo.very-unhealthy {
+  background-color: #7E2B7D;
+  color: #FFFFFF;
+  border-color: #7E2B7D;
+}
+
+.cityInfo.hazardous {
+  background-color: #480D27;
+  color: #FFFFFF;
+  border-color: #480D27;
+}
+
+.unknown {
+  background-color: #ebebeb;
+  color: #000000;
+  border-color: #ebebeb;
+}
