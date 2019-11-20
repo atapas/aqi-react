@@ -1,21 +1,10 @@
 .App {
   text-align: center;
-}
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
 }
 
 li {
@@ -23,7 +12,18 @@ li {
 }
 
 .cityInfo {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #000;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.linkBtn {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
 }

@@ -33,7 +33,7 @@ const SearchCities = () => {
                     placeholder="Enter a City Name"
                     onChange={ e => handleSearchTextChange(e) } />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Show AQI" />
             </form>
             {
                 loading ?

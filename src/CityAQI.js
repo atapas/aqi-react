@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import CityAQIDetails from './CityAQIDetails';
 
 const CityAQI = props => {
+    const [showDetails, setShowDetails] = useState(false);
+
     const aqi = props.cityInfo.aqi;
     const placeName = props.cityInfo.station.name;
+    const atTime = props.cityInfo.time.stime;
+    const uid = props.cityInfo.uid;
 
     const getCategorizedAQI = aqi => {
         let bColor = '#ebebeb';
@@ -36,7 +42,8 @@ const CityAQI = props => {
         }
         let style = {
             backgroundColor: bColor,
-            color: fColor
+            color: fColor,
+            borderColor: bColor
         };
 
         let catagorized = {};
@@ -46,11 +53,19 @@ const CityAQI = props => {
         console.log(catagorized);
 
         return catagorized;
+    };
+    
+    const getAtTimeFormatted = time => {
+        return `${new Date(atTime).getHours()}:${new Date(atTime).getMinutes()}:${new Date(atTime).getSeconds()}`
     }
     return (
-        <div style={ getCategorizedAQI(aqi).style } className='cityInfo'>
-            <span>{ placeName } - { aqi }</span>
-            <div>{ getCategorizedAQI(aqi).impact }</div>
+        <div 
+            style={ getCategorizedAQI(aqi).style } 
+            className='cityInfo'
+            onClick={ () => setShowDetails(!showDetails)}>
+            <span>At { getAtTimeFormatted(atTime) }: { placeName } - { aqi }</span>
+            <div><b>{ getCategorizedAQI(aqi).impact }</b></div>
+            { showDetails && <CityAQIDetails uid={ uid } /> }
         </div>
     )
 };

@@ -12,13 +12,16 @@ const CityAQIList = props => {
     return (
         <div>
             <ul>
-            <h2> Cities </h2>
             {
+                cityList.length > 0
+                ?
                 cityList.map((cityInfo, i) => (
                     <li key={i}>
                         <CityAQI cityInfo={cityInfo} />
                     </li>
                 ))
+                :
+                <h2>No Data Found</h2>
             }
             </ul>
         </div>
