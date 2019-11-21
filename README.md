@@ -1,4 +1,4 @@
-# Project aqi-react
+# Project `aqi-react`
 aqi-react is a project created to know the Air Quality Index of various parts of the world. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to create the frond-end User Interfaces using ReactJs. At the backend, [Air Quality Programmatic APIs](https://aqicn.org/api/) are used to get the details of the Air Quality.
@@ -8,8 +8,14 @@ An air quality index (AQI) is used by government agencies to communicate to the 
 
 Public health risks increase as the AQI rises. Different countries have their own air quality indices, corresponding to different national air quality standards. More details can be found [here](https://en.wikipedia.org/wiki/Air_quality_index).
 
-# Why is this project Important
+# Why is this project Important?
 This project was created as a pet project to explain the concepts of reactjs. It has nothing commercial about it. It is with pure learn and share objecives.
+
+One can learn following concepts of reactJs:
+- React Hook Concept
+- Uasage of React Forms with Controlled Component
+- Show-Hide component in React
+- Passing Props
 
 # Demo
 A Demo of the project [is running here](https://air-quality-index.netlify.com/).
