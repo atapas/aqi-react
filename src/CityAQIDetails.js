@@ -45,7 +45,7 @@ const CityAQIDetails = props => {
             'Nitrogen Dioxide',
             'Sulphur Dioxide',
             'Carbon Monoxyde'].indexOf(name) < 0) {
-                return 'unknown';
+                return '';
             }
         if (value >= 0 && value <= 50) {
             return 'good';
