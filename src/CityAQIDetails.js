@@ -36,6 +36,31 @@ const CityAQIDetails = props => {
         console.log(ret);
         return ret;
     }
+
+    const colorize = (name, value) => {
+        if ([
+            'particulate matter 2.5(pm 2.5)', 
+            'particulate matter 10(pm 10)',
+            'Ozone',
+            'Nitrogen Dioxide',
+            'Sulphur Dioxide',
+            'Carbon Monoxyde'].indexOf(name) < 0) {
+                return 'unknown';
+            }
+        if (value >= 0 && value <= 50) {
+            return 'good';
+        } else if (value >= 51 && value <= 100) {
+            return 'moderate';
+        } else if (value >= 101 && value <= 150) {
+            return 'unhealthy-sentitive';
+        } else if (value >= 151 && value <= 200) {
+            return 'unhealthy';
+        } else if (value >= 201 && value <= 300) {
+            return 'very-unhealthy';
+        } else if (value >= 301) {
+            return 'hazardous';
+        }
+    }
        
     
     return(
@@ -53,7 +78,7 @@ const CityAQIDetails = props => {
                         {
                             getSpectrum(info.data.iaqi).map((spectrum, i) => (
                                 <li key={i}>
-                                    <span class="dot"></span>
+                                    <span className={`dot ${colorize(spectrum.key, spectrum.value)}`}></span>
                                     <span>{spectrum.key}</span>: <span>{spectrum.value}</span>
                                 </li>
                             ))

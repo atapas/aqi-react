@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   display: flex;
@@ -7,25 +8,12 @@
   font-size: calc(10px + 2vmin);
 }
 
-li {
-  list-style: none;
-}
-
 .cityInfo {
   margin-bottom: 5px;
   padding: 10px;
   border: 1px solid;
   cursor: pointer;
   border-radius: 25px;
-}
-
-.linkBtn {
-  background: none!important;
-  border: none;
-  padding: 0!important;
-  color: #069;
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .cityInfo.good {
@@ -82,42 +70,36 @@ li {
 .dot {
   height: 12px;
   width: 14px;
-  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   margin-right: 3px;
   margin-top: 2px;
 }
 
-input[type=text] {
-  width: 60%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('./search-icon');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.dot.unknown {
+  background-color: #bbb;
 }
 
-input[type=text]:focus {
-  width: 70%;
+.dot.good {
+  background-color: #52B947;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+.dot.moderate {
+  background-color: #F3EC19;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+.dot.unhealthy-sentitive {
+  background-color: #F57E20;
+}
+
+.dot.unhealthy {
+  background-color: #ED1D24;
+}
+
+.dot.very-unhealthy {
+  background-color: #7E2B7D;
+}
+
+.dot.hazardous {
+  background-color: #480D27;
 }
