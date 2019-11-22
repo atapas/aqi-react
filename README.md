@@ -12,7 +12,7 @@ Public health risks increase as the AQI rises. Different countries have their ow
 This project was created as a pet project to explain the concepts of reactjs. It has nothing commercial about it. It is with pure learn and share objecives.
 
 One can learn following concepts of reactJs:
-- React Hook Concept
+- React Hook Concepts using, `useState`, `useEffect`, `useRef` etc.
 - Uasage of React Forms with Controlled Component
 - Show-Hide component in React
 - Passing Props
