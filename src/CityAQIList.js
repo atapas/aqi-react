@@ -1,14 +1,14 @@
 import React from 'react';
 
 import CityAQI from './CityAQI';
+import NoDataFound from './NoDataFound';
 
 const CityAQIList = props => {
     let  cityList = [];    
     if (props.data) {
         cityList = props.data;
     }
-    
-    
+        
     return (
         <div>
             <ul>
@@ -21,7 +21,7 @@ const CityAQIList = props => {
                     </li>
                 ))
                 :
-                <h3>No Data Found. How about trying out a City name?</h3>
+                <NoDataFound />
             }
             </ul>
         </div>
