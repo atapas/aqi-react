@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { useAQIAPIs } from './useAQIAPIs';
 
@@ -10,6 +10,11 @@ const SearchCities = () => {
     const [url, setUrl] = useState('');
     const [cities , loading, error] = useAQIAPIs(url);
     const [searchText, setSearchText] = useState('');
+    const searchInput = useRef(null);
+
+    useEffect(() => {
+        searchInput.current.focus();
+    }, []);
     
     const searchCityName = (event) => {
         event.preventDefault();
@@ -29,6 +34,7 @@ const SearchCities = () => {
                 
                 <input 
                     type="text" 
+                    ref={ searchInput }
                     value={ searchText } 
                     placeholder="Enter a City Name"
                     onChange={ e => handleSearchTextChange(e) } />
