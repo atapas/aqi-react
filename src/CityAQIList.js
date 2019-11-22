@@ -21,7 +21,7 @@ const CityAQIList = props => {
                     </li>
                 ))
                 :
-                <h2>No Data Found</h2>
+                <h3>No Data Found. How about trying out a City name?</h3>
             }
             </ul>
         </div>

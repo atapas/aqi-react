@@ -17,7 +17,6 @@ li {
 }
 
 input[type=text] {
-  width: 60%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -29,11 +28,10 @@ input[type=text] {
   padding: 12px 20px 12px 40px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  display: block;
+  width: calc(100% - 16px);
 }
 
-input[type=text]:focus {
-  width: 70%;
-}
 
 input[type=submit] {
   background-color: #4CAF50;
@@ -43,8 +41,24 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  display: table-cell;
+  vertical-align: top;
+  height: 46px;
 }
 
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
+form {
+  display: table;
+  margin: 0 auto;
+}
+
+label {
+  display: table-cell;
+  margin: 0;
+  vertical-align: top;
+}
+
+
