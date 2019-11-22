@@ -20,6 +20,9 @@ One can learn following concepts of reactJs:
 # Demo
 A Demo of the project [is running here](https://air-quality-index.netlify.com/).
 
+# See it in Action
+[![AQI](site/flow.gif)](https://tapasadhikary.com)
+
 # Running the Project
 
 In the project directory, you can run:
