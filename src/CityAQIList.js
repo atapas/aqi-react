@@ -10,7 +10,7 @@ const CityAQIList = props => {
     }
         
     return (
-        <div>
+        <div className="cityList">
             <ul>
             {
                 cityList.length > 0

@@ -8,6 +8,10 @@
   font-size: calc(10px + 2vmin);
 }
 
+.cityList {
+  padding-right: 44px;;
+}
+
 .cityInfo {
   margin-bottom: 5px;
   padding: 10px;
