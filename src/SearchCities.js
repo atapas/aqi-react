@@ -18,12 +18,10 @@ const SearchCities = () => {
     
     const searchCityName = (event) => {
         event.preventDefault();
-        // console.log(searchText);
         setUrl(`${SEARCH_CITIES_BASE_URL}?token=${TOKEN}&keyword=${searchText}`);
     }
 
     const handleSearchTextChange = (event) => {
-        // console.log(event.target.value);
         setSearchText(event.target.value);
     }
     return(

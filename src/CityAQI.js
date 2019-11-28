@@ -40,14 +40,11 @@ const CityAQI = props => {
         catagorized['impact'] = impact;
         catagorized['className'] = className;
 
-        // console.log(catagorized);
-
         return catagorized;
     };
     
     const getAtTimeFormatted = time => {
-        //return `${new Date(atTime).getHours()}:${new Date(atTime).getMinutes()}:${new Date(atTime).getSeconds()}`
-        return moment(time).format('MMMM DD YYYY, h:mm:ss a') 
+        return moment(time).format('h:mm:ss a');
     }
     return (
         <div  
