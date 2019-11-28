@@ -8,7 +8,7 @@ import CityAQIList from './CityAQIList';
 
 const SearchCities = () => {
     const [url, setUrl] = useState('');
-    const [cities , loading, error] = useAQIAPIs(url);
+    const [cities , loading, initial, error] = useAQIAPIs(url);
     const [searchText, setSearchText] = useState('');
     const searchInput = useRef(null);
 
@@ -43,7 +43,7 @@ const SearchCities = () => {
                 loading ?
                     (<span>loading...</span>)
                     :
-                    (<CityAQIList data={cities.data}/>)
+                    !initial && (<CityAQIList data={ cities.data }/>)
             }
         </div>
     )

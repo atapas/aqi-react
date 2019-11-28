@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useAQIAPIs = (url) => {
     const [data, setData] = useState({});
+    const [initial, setInitial] = useState(true);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
@@ -11,6 +12,7 @@ const useAQIAPIs = (url) => {
         }
         async function fetchData() {
             try {
+                setInitial(false);
                 setLoading(true);
                 let response = await fetch(url);
                 const json = await response.json();
@@ -24,7 +26,7 @@ const useAQIAPIs = (url) => {
         fetchData();
     }, [url]);
 
-    return [ data, loading, error ];
+    return [ data, loading, initial, error ];
 };
 
 export { useAQIAPIs };

@@ -5,7 +5,7 @@ const NoDataFound = () => {
         <h3 className='no-data-found'>
             <span>No Data Found!</span>
             <br/>
-            <span>How about trying out a City Name?</span>
+            <span>How about trying out another City Name?</span>
         </h3>
     )
 };
