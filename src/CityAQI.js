@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import moment from 'moment';
+
 import CityAQIDetails from './CityAQIDetails';
 
 const CityAQI = props => {
@@ -38,13 +40,14 @@ const CityAQI = props => {
         catagorized['impact'] = impact;
         catagorized['className'] = className;
 
-        console.log(catagorized);
+        // console.log(catagorized);
 
         return catagorized;
     };
     
     const getAtTimeFormatted = time => {
-        return `${new Date(atTime).getHours()}:${new Date(atTime).getMinutes()}:${new Date(atTime).getSeconds()}`
+        //return `${new Date(atTime).getHours()}:${new Date(atTime).getMinutes()}:${new Date(atTime).getSeconds()}`
+        return moment(time).format('MMMM DD YYYY, h:mm:ss a') 
     }
     return (
         <div  
