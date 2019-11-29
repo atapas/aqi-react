@@ -44,6 +44,7 @@ input[type=submit] {
   display: table-cell;
   vertical-align: top;
   height: 46px;
+  -webkit-appearance: none;
 }
 
 input[type=submit]:hover {
